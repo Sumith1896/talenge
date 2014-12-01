@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,6 +47,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+# Password Hashing algorithms
+PASSWORD_HASHERS = (
+    'django.contrib.authentication.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.authentication.hashers.BCryptPasswordHasher',
+    'django.contrib.authentication.hashers.PBKDF2PasswordHasher',
+    'django.contrib.authentication.hashers.PBKDF2SHA1PasswordHasher',
 )
 
 ROOT_URLCONF = 'talenge.urls'
