@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Talenge</title>
-    </head>
+{% extends "base.html" %}
 
-    <body>
-        <h1>Register with Talenge</h1>
+{% block title %}
+    Talenge &middot; Register
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+
+        <h1>Sign Up!</h1>
 
         {% if registered %}
         Auth says: <strong>thank you for registering!</strong>
@@ -28,5 +32,5 @@
             <input type="submit" name="submit" value="Register" />
         </form>
         {% endif %}
-    </body>
-</html>
+</div>
+{% endblock %}
