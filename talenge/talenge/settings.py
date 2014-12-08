@@ -49,6 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+'''
 # Password Hashing algorithms
 PASSWORD_HASHERS = (
     'django.contrib.authentication.hashers.BCryptSHA256PasswordHasher',
@@ -56,6 +57,7 @@ PASSWORD_HASHERS = (
     'django.contrib.authentication.hashers.PBKDF2PasswordHasher',
     'django.contrib.authentication.hashers.PBKDF2SHA1PasswordHasher',
 )
+'''
 
 ROOT_URLCONF = 'talenge.urls'
 

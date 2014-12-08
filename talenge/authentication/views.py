@@ -1,7 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from authentication.forms import UserForm, UserProfileForm
+from django.template import RequestContext
 
-def index(request):
+def home(request):
+    context = RequestContext(request)
+
+    context_dict = {}
+
+    return render_to_response('authentication/home.html', context_dict, context)
+
+def register(request):
 
     # A boolean value for telling the template whether the registration was successful.
     # Set to False initially. Code changes value to True when registration succeeds.
