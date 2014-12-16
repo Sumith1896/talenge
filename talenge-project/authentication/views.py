@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from authentication.forms import UserForm, UserProfileForm
 from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
@@ -106,4 +106,8 @@ def auth_login(request):
     else:
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
-        return render_to_response('authentication/login.html', {}, context)
+        return render_to_response('authentication/home.html', {}, context)
+
+def logout(request):
+    request.session.flush()
+    return redirect("/")
