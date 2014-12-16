@@ -8,7 +8,7 @@ To run this app locally, you need to have Python 2.7 installed. If you don't, do
 
     sudo apt-get install python2.7
 
-Then, you need to install all the reuirements. We'd suggest you to work on a virtual environment, but anyway the process is the same:
+Then, you need to install all the reuirements. We'd suggest you to work on a virtual environment ([setup instructions](http://www.jeffknupp.com/blog/2013/12/18/starting-a-django-16-project-the-right-way/)), but anyway the process is the same:
 
     pip intall -r requirements.txt
 
