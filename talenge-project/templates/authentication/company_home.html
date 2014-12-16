@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ user.username }} &middot; Talenge
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    
+    {% if user.is_authenticated %}
+    	<h1>Welcome to Talenge, {{ user.username }}. <br> You're a Company.</h1>
+    {% else %}
+    	<h1>Welcome to Talenge</h1>
+    {% endif %}
+</div>
+
+{% endblock %}
