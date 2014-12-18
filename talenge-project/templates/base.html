@@ -37,7 +37,12 @@
               </ul>
               <ul class="nav navbar-nav navbar-right">
                   {% if user.is_authenticated %}
-                  <li><a href="/logout">Logout</a></li>
+                    {% if request.session.utype == s %}
+                      <li><a href="/student/{{ user.id }}">&lt; {{ user.username }} &gt;</a></li>
+                    {% elif request.session.utype == f %}
+                      <li><a href="/company/{{ user.id }}">&lt; {{ user.username }} &gt;</a></li>
+                    {% endif %}
+                    <li><a href="/logout">Logout</a></li>
                   {% endif %}
                </ul>
             </div><!--/.nav-collapse -->
