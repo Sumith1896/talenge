@@ -8,9 +8,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 def home(request):
     context = RequestContext(request)
     if request.session.get('utype') == 's':
-        return render_to_response('authentication/student_home.html', {}, context)
+        return render_to_response('student/student_home.html', {}, context)
     if request.session.get('utype') == 'c':
-        return render_to_response('authentication/company_home.html', {}, context)
+        return render_to_response('company/company_home.html', {}, context)
     else: 
         return render_to_response('authentication/home.html', {}, context)
 
